@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; 
+    color: #343a40; 
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+/* Title styling */
+.admin-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px; 
+    color: #007bff; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    gap: 30px;
+    width: 100%; 
+    max-width: 900px; 
+}
+
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px; 
+    border-radius: 8px; 
+    color: white;
+    font-size: 1.5rem; 
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    min-height: 150px; 
+    min-width: 150px; 
+}
+
+.add-categorie {
+    background-color: #ff0000; 
+}
+
+.view-categories {
+    background-color: #17a2b8; 
+}
+
+.add-item {
+    background-color: #28a745; 
+}
+
+.view-items {
+    background-color: #ffc107;
+}
+
+.add-offer {
+    background-color: #6f42c1; 
+}
+
+.view-offers {
+    background-color: #17a2b8; 
+}
+
+.view-users {
+    background-color: #89118d; 
+}
+
+.add-user {
+    background-color: #08e2c5; 
+}
+
+
+.grid-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon styles */
+i {
+    margin-right: 10px;
+    font-size: 1.5rem; 
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .admin-title {
+        font-size: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
+
+    .grid-item {
+        width: 100%;
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+        min-height: 100px; /* Adjust minimum height for smaller screens */
+    }
+}
